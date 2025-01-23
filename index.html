@@ -5,58 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sauron's Web</title>
     <link href="img/Anon.png" rel="shortcut icon" type="image/x-icon">
+    
     <style>
+        /* 구글 폰트 임포트 */
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+        /* 기본 스타일 */
+        body {
+            /* 배경 이미지 URL 설정 */
+            background-image: url('img/BG.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+          }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #222222;
             margin: 0;
             padding: 0;
         }
+
+        /* 헤더 스타일 */
         header {
             max-width: 910px;
-            margin: auto; /* 본문처럼 가운데 정렬 */
-            background-color: #333; /* 배경색 유지 */
-        }
-        
-        header {
-            width: 900;
-            text-align: center;
+            margin: auto; /* 가운데 정렬 */
+            background-color: rgba(51, 51, 51, 0);
+            width: 900px;
+            display: flex;
+            align-items: center; /* 세로 중앙 정렬 */
             padding: 15px;
-            color: white;
         }
-        
-        footer {
-            max-width: 900px;
-            margin: auto; /* 본문처럼 가운데 정렬 */
-            background-color: #333; /* 배경색 유지 */
-            text-align: center;
-            padding: 20px;
-            color: white;
-            margin-top: 20px;
-        }
-        
 
+        /* 네비게이션 바 스타일 */
         nav {
-            background-color: #444;
-            padding: 10px;
             display: flex;
             justify-content: center;
+            padding: 10px;
             max-width: 920px; /* 본문과 동일한 너비 */
             margin: auto; /* 중앙 정렬 */
         }
-        
 
         nav a {
-            color: white;
+            font-size: 18px;
+            color: rgb(167, 2, 2);
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 17px;
             font-weight: bold;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: white;
         }
 
+        /* 메인 콘텐츠 스타일 */
         main {
             padding: 20px;
             max-width: 900px;
@@ -65,14 +67,21 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* 섹션 스타일 */
         .section {
             margin-bottom: 20px;
         }
 
-        h1, h2 {
+        h1 {
+            font-family: "Bebas Neue", serif;
             color: #ffffff;
         }
 
+        h2, h3, p {
+            color: rgb(58, 58, 58);
+        }
+
+        /* 사이드바 (후원) 스타일 */
         aside {
             margin-top: 20px;
             padding: 10px;
@@ -80,6 +89,7 @@
             border: 1px solid #ddd;
         }
 
+        /* 트위터 피드 스타일 */
         .twitter-feed {
             margin-top: 20px;
             padding: 10px;
@@ -88,75 +98,44 @@
             text-align: center;
         }
 
+        /* 푸터 스타일 */
+        footer {
+            background-color: rgba(51, 51, 51, 0);
+            max-width: 900px;
+            margin: auto; /* 가운데 정렬 */
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
-        <h1 style="font-size: 60px;">T1HIOPS</h1>
+        <h1 style="font-size: 45px;"><strong>T1HI</strong></h1>
 
+        <nav>
+            <a href="index.html" style="color: #ffffff;">Home</a>
+            <a href="sites/tutorials.html">Tutorials</a>
+            <a href="sites/network.html">Network</a>
+            <a href="sites/aboutus.html">About Us</a>
+            <a href="#">Webchat</a>
+            <a href="sites/history.html">History</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Tutorials</a>
-        <a href="#">Network</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">Donate</a>
-    </nav>
 
     <main>
         <div class="section">
-            <h2>Welcome to AnonOps</h2>
-            <p>AnonOps IRC is an international communication platform frequented by activists, nerds, trolls and those who wish to otherwise remain anonymous.</p>
-            <p>Our website is currently under review and renovation. Any suggestions? Feel free to join <strong>#website</strong> and tell us all about your great idea.</p>
-        </div>
-
-        <div class="section">
-            <h2>IRCd Major Upgrade - 2020-04-03</h2>
-            <p>We will be upgrading our IRCds to a newer supported version. Expect a downtime of up to two hours while we work on this.</p>
-        </div>
-
-        <div class="section">
-            <h2>IRCd Services Major Upgrade - 2020-02-09</h2>
-            <p>We are updating the IRC services to enhance functionality and security. Please bear with us during this transition.</p>
-        </div>
-
-        <aside>
-            <h3>Donate with Bitcoin</h3>
-            <p>Our network is free to all. Please show your support by donating to our server costs. Thank you!</p>
-            <button>Click here to donate</button>
-        </aside>
-
-        <div class="twitter-feed">
-            <h3>AnonOps Twitter Feed</h3>
-            <p>Nothing to see here - yet</p>
-        </div>
-        <div class="twitter-feed">
-            <h3>AnonOps Twitter Feed</h3>
-            <p>Nothing to see here - yet</p>
-        </div>
-        <div class="twitter-feed">
-            <h3>AnonOps Twitter Feed</h3>
-            <p>Nothing to see here - yet</p>
-        </div>
-        <div class="twitter-feed">
-            <h3>AnonOps Twitter Feed</h3>
-            <p>Nothing to see here - yet</p>
-        </div>
-        <div class="twitter-feed">
-            <h3>AnonOps Twitter Feed</h3>
-            <p>Nothing to see here - yet</p>
-        </div>
-        <div class="twitter-feed">
-            <h3>AnonOps Twitter Feed</h3>
-            <p>Nothing to see here - yet</p>
+            <h2>Welcome to T1HI</h2>
+            <p>T1HI IRC is an international anonymous communication platform established to ensure freedom and safety among hackers.</p>
+            <p>If you have a great idea for our website, join the <b>#Web</b> channel and share your thoughts.</p>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 T1HIOPS. All rights reserved.</p>
+        <p style="color:white">&copy; 2025 T1HIOPS. All rights reserved.</p>
     </footer>
 
 </body>
